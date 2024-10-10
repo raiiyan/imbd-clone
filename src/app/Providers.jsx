@@ -1,6 +1,5 @@
 'use client'
 
-import React, { Children } from 'react'
 import { ThemeProvider } from 'next-themes'
 
 function Providers({children}) {
