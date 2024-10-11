@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Providers from "@/app/Providers";
 import Navbar from '@/components/Navbar'
 import SearchBox from '@/components/SearchBox'
+import { Suspense } from 'react';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,11 +35,12 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <Navbar />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Navbar />
+          </Suspense>
           <SearchBox />
           {children}
         </Providers>
-        
       </body>
     </html>
   );
