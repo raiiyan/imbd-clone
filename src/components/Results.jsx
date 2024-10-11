@@ -7,6 +7,7 @@ function Results({results}) {
     2xl:grid-cols-5 mx-w-6xl mx-auto px-20 py-5'>
         {
             results.map((result) => (
+              
                 <Card key={result.id} result={result}/>
             ))
         }
